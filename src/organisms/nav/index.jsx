@@ -6,7 +6,7 @@ import Menu from "./../menu/index";
 import "./index.scss";
 
 export default function Nav() {
-  const [isCollapsed, toggleCollapsed] = useState(false);
+  const [isCollapsed, toggleCollapsed] = useState(true);
 
   return (<div className={cx("b-nav", {"b-nav--collapsed": isCollapsed})}>
     <div className="b-nav__menu">

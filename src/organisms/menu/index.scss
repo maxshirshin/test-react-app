@@ -5,28 +5,31 @@
 
   &__row {
     display: block;
+    position: relative;
     min-height: $default-icon-side + $menu-side-indent;
+  }
 
-    &--parent {
-      background: transparent url("../../../node_modules/feather-icons/dist/icons/chevron-down.svg") right $menu-side-indent/2 top $menu-side-indent/2 no-repeat;
-    }
+  &__toggle {
+    display: block;
+    width: $default-icon-side + $menu-side-indent;
+    height: $default-icon-side + $menu-side-indent;
+    position: absolute;
+    top: 0;
+    right: 0;
 
-    > .b-menu__row {
-      display: none;
-    }
+    background: transparent url("../../../node_modules/feather-icons/dist/icons/chevron-down.svg") center center no-repeat;
+
+    cursor: pointer;
 
     &--expanded {
       background-image: url("../../../node_modules/feather-icons/dist/icons/chevron-up.svg");
-
-      > .b-menu__row {
-        display: block;
-      }
     }
   }
 
   &__link {
     display: inline-flex;
     min-height: $default-icon-side + $menu-side-indent;
+    max-width: calc(100% - #{$default-icon-side + $menu-side-indent});
     align-items: center;
     padding: $menu-side-indent/2 0 $menu-side-indent/2 $menu-side-indent;
     white-space: nowrap;
@@ -47,13 +50,29 @@
     padding: 0 $menu-side-indent/2;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
 
-    .b-menu--collapsed & {
-      display: none;
-    }
+  &__icon {
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 
   &__row > &__row &__icon {
     visibility: hidden;
+  }
+
+  &--collapsed {
+    .b-menu__text, .b-menu__toggle {
+      display: none;
+    }
+
+    .b-menu__link {
+      display: flex;
+      max-width: none;
+    }
+
+    .b-menu__row > .b-menu__row {
+      display: none;
+    }
   }
 }
