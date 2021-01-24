@@ -1,0 +1,37 @@
+@import "../../components/common/index";
+
+.b-nav {
+  &, & * {
+    box-sizing: border-box;
+  }
+
+  position: relative;
+
+  background-color: #555;
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: $menu-width_closed;
+    border-right: solid 1px $line-color;
+
+    .b-nav--expanded & {
+      width: $menu-width_open;
+    }
+  }
+
+  &__header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: $menu-width_closed;
+    height: $header-height;
+
+    border-bottom: solid 1px $line-color;
+
+    .b-nav--expanded & {
+      left: $menu-width_open;
+    }
+  }
+}
