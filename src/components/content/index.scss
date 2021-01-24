@@ -1,0 +1,10 @@
+@import "../common/index";
+
+.b-content {
+  margin: $header-height 0 0 $menu-width_closed;
+  padding: 1em;
+  min-height: 3000px;
+
+  overflow: auto;
+  background-color: aqua;
+}
