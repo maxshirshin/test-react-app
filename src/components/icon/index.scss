@@ -1,12 +1,24 @@
 @import "../common/index";
 
 .b-icon {
-  display: block;
+  display: inline-block;
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: $default-icon-side;
+  height: $default-icon-side;
 
   overflow: hidden;
 
-  font: .5em sans-serif;
+  line-height: 0;
+
+  &--home {
+    background-image: url("../../../node_modules/feather-icons/dist/icons/home.svg");
+    background-size: $default-icon-side $default-icon-side;
+    text-indent: -9999px;
+  }
+
+  &--hamburger {
+    background-image: url("../../../node_modules/feather-icons/dist/icons/menu.svg");
+    background-size: $default-icon-side $default-icon-side;
+    text-indent: -9999px;
+  }
 }

@@ -1,0 +1,59 @@
+@import "../../components/common/index";
+
+.b-menu {
+  display: block;
+
+  &__row {
+    display: block;
+    min-height: $default-icon-side + $menu-side-indent;
+
+    &--parent {
+      background: transparent url("../../../node_modules/feather-icons/dist/icons/chevron-down.svg") right $menu-side-indent/2 top $menu-side-indent/2 no-repeat;
+    }
+
+    > .b-menu__row {
+      display: none;
+    }
+
+    &--expanded {
+      background-image: url("../../../node_modules/feather-icons/dist/icons/chevron-up.svg");
+
+      > .b-menu__row {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    min-height: $default-icon-side + $menu-side-indent;
+    align-items: center;
+    padding: $menu-side-indent/2 0 $menu-side-indent/2 $menu-side-indent;
+    white-space: nowrap;
+    text-decoration: none;
+
+    font: .82em sans-serif;
+    color: #555;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+
+    background-color: #fcc;
+  }
+
+  &__text {
+    display: block;
+    padding: 0 $menu-side-indent/2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .b-menu--collapsed & {
+      display: none;
+    }
+  }
+
+  &__row > &__row &__icon {
+    visibility: hidden;
+  }
+}

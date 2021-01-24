@@ -1,10 +1,6 @@
 @import "../../components/common/index";
 
 .b-nav {
-  &, & * {
-    box-sizing: border-box;
-  }
-
   position: relative;
 
   background-color: #555;
@@ -13,11 +9,13 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    width: $menu-width_closed;
-    border-right: solid 1px $line-color;
+    width: $menu-width_open;
 
-    .b-nav--expanded & {
-      width: $menu-width_open;
+    border-right: solid 1px $line-color;
+    background-color: #fff;
+
+    .b-nav--collapsed & {
+      width: $menu-width_closed;
     }
   }
 
@@ -25,13 +23,19 @@
     position: fixed;
     top: 0;
     right: 0;
-    left: $menu-width_closed;
+    left: $menu-width_open;
     height: $header-height;
+    line-height: $header-height;
 
     border-bottom: solid 1px $line-color;
 
-    .b-nav--expanded & {
-      left: $menu-width_open;
+    .b-nav--collapsed & {
+      left: $menu-width_closed;
     }
+  }
+
+  &__toggle {
+    padding: $menu-side-indent $menu-side-indent $header-height - $menu-side-indent - $default-icon-side $menu-side-indent;
+    cursor: pointer;
   }
 }

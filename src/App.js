@@ -1,5 +1,5 @@
 import Nav from "./organisms/nav";
-import './components/content/index.scss';
+import "./components/content/index.scss";
 
 function App() {
   return (

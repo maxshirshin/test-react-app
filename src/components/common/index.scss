@@ -1,4 +1,9 @@
-$header-height: 75px;
-$menu-width_closed: 50px;
+$line-color: #555;
+
+$default-icon-side: 24px;
+
 $menu-width_open: 300px;
-$line-color: #f00;
+$menu-side-indent: 18px;
+$menu-width_closed: $default-icon-side + 2 * $menu-side-indent;
+
+$header-height: $default-icon-side + 2 * $menu-side-indent;

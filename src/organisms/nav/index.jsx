@@ -1,14 +1,20 @@
-import Icon from './../../components/icon';
+import { useState } from "react";
+import cx from "classnames";
 
-import './index.scss';
+import Icon from "./../../components/icon";
+import Menu from "./../menu/index";
+import "./index.scss";
 
 export default function Nav() {
-  return (<div className="b-nav">
+  const [isCollapsed, toggleCollapsed] = useState(false);
+
+  return (<div className={cx("b-nav", {"b-nav--collapsed": isCollapsed})}>
     <div className="b-nav__menu">
-      <Icon type="hamburger" />
+      <div className="b-nav__toggle" onClick={() => toggleCollapsed(!isCollapsed)}><Icon type="hamburger" /></div>
+      <Menu collapsed={isCollapsed} />
     </div>
     <div className="b-nav__header">
-      <Icon type="logo"/>
+      <Icon type="home"/>
     </div>
   </div>);
 }
