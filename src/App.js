@@ -4,8 +4,8 @@ import "./components/content/index.scss";
 function App() {
   return (
     <div className="b-app">
-      <Nav/>
       <div className="b-content">Here the text goes</div>
+      <Nav/>
     </div>
   );
 }
