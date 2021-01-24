@@ -7,18 +7,28 @@
   height: $default-icon-side;
 
   overflow: hidden;
-
+  text-indent: -9999px;
   line-height: 0;
 
-  &--home {
-    background-image: url("../../../node_modules/feather-icons/dist/icons/home.svg");
-    background-size: $default-icon-side $default-icon-side;
-    text-indent: -9999px;
+  background-size: $default-icon-side $default-icon-side;
+
+  &--cart {
+    background-image: url("../../../node_modules/feather-icons/dist/icons/shopping-cart.svg");
+  }
+
+  &--mail {
+    background-image: url("../../../node_modules/feather-icons/dist/icons/mail.svg");
+  }
+
+  &--box {
+    background-image: url("../../../node_modules/feather-icons/dist/icons/box.svg");
+  }
+
+  &--disc {
+    background-image: url("../../../node_modules/feather-icons/dist/icons/box.svg");
   }
 
   &--hamburger {
     background-image: url("../../../node_modules/feather-icons/dist/icons/menu.svg");
-    background-size: $default-icon-side $default-icon-side;
-    text-indent: -9999px;
   }
 }

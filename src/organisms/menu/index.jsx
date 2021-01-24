@@ -4,6 +4,13 @@ import "./index.scss";
 import cx from "classnames";
 import data from "./navigation.json";
 
+const urlToIconMap = {
+    "/orders": "cart",
+    "/tickets": "mail",
+    "/management": "box"
+};
+const defaultIcon = "disc";
+
 function Row(props) {
     const { children, url, title } = props;
     const [isExp, setExp] = useState(false);
@@ -18,7 +25,7 @@ function Row(props) {
             })}
         />}
         <a className="b-menu__link" href={url}>
-            <Icon type="home" className="b-menu__icon"/>
+            <Icon type={urlToIconMap[url] || defaultIcon} className="b-menu__icon"/>
             <span title={title} className="b-menu__text">{title}</span>
         </a>{isExp && children && children.length > 0 && children.map(child => <Row {...child} />)}
     </div>);
