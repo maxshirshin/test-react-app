@@ -4,7 +4,7 @@ import "./components/content/index.scss";
 function App() {
   return (
     <div className="b-app">
-      <div className="b-content">Here the text goes</div>
+      <main className="b-content">Here the text goes</main>
       <Nav/>
     </div>
   );
