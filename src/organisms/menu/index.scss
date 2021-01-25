@@ -6,13 +6,13 @@
   &__row {
     display: block;
     position: relative;
-    min-height: $default-icon-side + $menu-side-indent;
+    min-height: $icon-width-default + $menu-side-indent;
   }
 
   &__toggle {
     display: block;
-    width: $default-icon-side + $menu-side-indent;
-    height: $default-icon-side + $menu-side-indent;
+    width: $icon-width-default + $menu-side-indent;
+    height: $icon-width-default + $menu-side-indent;
     position: absolute;
     top: 0;
     right: 0;
@@ -28,8 +28,8 @@
 
   &__link {
     display: inline-flex;
-    min-height: $default-icon-side + $menu-side-indent;
-    max-width: calc(100% - #{$default-icon-side + $menu-side-indent});
+    min-height: $icon-width-default + $menu-side-indent;
+    max-width: calc(100% - #{$icon-width-default + $menu-side-indent});
     align-items: center;
     padding: $menu-side-indent/2 0 $menu-side-indent/2 $menu-side-indent;
     white-space: nowrap;
@@ -50,7 +50,7 @@
         display: inline;
         content: "•";
         position: absolute;
-        margin-left: $default-icon-side;
+        margin-left: $icon-width-default;
         visibility: hidden;
       }
 

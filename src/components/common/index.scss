@@ -1,10 +1,10 @@
 $line-color: #555;
 $brand-color: #620267;
 
-$default-icon-side: 24px;
+$icon-width-default: 24px;
 
 $menu-width_open: 300px;
 $menu-side-indent: 18px;
-$menu-width_closed: $default-icon-side + 2 * $menu-side-indent;
+$menu-width_closed: $icon-width-default + 2 * $menu-side-indent;
 
-$header-height: $default-icon-side + 2 * $menu-side-indent;
+$header-height: $icon-width-default + 2 * $menu-side-indent;

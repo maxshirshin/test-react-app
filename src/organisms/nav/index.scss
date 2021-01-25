@@ -25,6 +25,9 @@
     right: 0;
     left: $menu-width_open;
     height: $header-height;
+    display: flex;
+    padding-left: $icon-width-default;
+
     line-height: $header-height;
 
     background-color: #fff;
@@ -35,8 +38,14 @@
     }
   }
 
+  &__logo {
+    display: block;
+    height: 70%;
+    align-self: center;
+  }
+
   &__toggle {
-    padding: $menu-side-indent $menu-side-indent $header-height - $menu-side-indent - $default-icon-side $menu-side-indent;
+    padding: $menu-side-indent $menu-side-indent $header-height - $menu-side-indent - $icon-width-default $menu-side-indent;
     cursor: pointer;
   }
 }

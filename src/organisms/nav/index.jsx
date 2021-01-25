@@ -19,7 +19,7 @@ export default function Nav() {
       <Menu collapsed={isCollapsed} data={data}/>
     </div>
     <div className="b-nav__header">
-      <Icon type="home"/>
+      <img className="b-nav__logo" alt="Wayfair Logo" src="/img/logo.svg" />
     </div>
   </div>);
 }

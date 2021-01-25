@@ -3,14 +3,14 @@
 .b-icon {
   display: inline-block;
   position: relative;
-  width: $default-icon-side;
-  height: $default-icon-side;
+  width: $icon-width-default;
+  height: $icon-width-default;
 
   overflow: hidden;
   text-indent: -9999px;
   line-height: 0;
 
-  background-size: $default-icon-side $default-icon-side;
+  background-size: $icon-width-default $icon-width-default;
 
   &--cart {
     background-image: url("../../../node_modules/feather-icons/dist/icons/shopping-cart.svg");
