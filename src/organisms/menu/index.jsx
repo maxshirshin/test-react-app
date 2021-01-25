@@ -19,6 +19,7 @@ function Row(props) {
         className="b-menu__row">
         {isParent && <div
             onClick={() => setExp(!isExp)}
+            title={isExp ? "collapse" : "expand" }
             className={cx("b-menu__toggle", {
                 "b-menu__toggle--expanded": isExp
             })}
@@ -33,10 +34,10 @@ function Row(props) {
 }
 
 export default function Menu(props) {
-    const { data } = props;
+    const { data, collapsed = true } = props;
 
     return (<nav
         className={cx("b-menu", {
-            [`b-menu--collapsed`]: !!props.collapsed
+            [`b-menu--collapsed`]: !!collapsed
         })}>{data.map((row, i) => <Row key={row.url + i} {...row} />)}</nav>);
 }

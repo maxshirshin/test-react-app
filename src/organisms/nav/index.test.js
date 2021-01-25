@@ -31,12 +31,12 @@ describe("toggle menu", () => {
         // we are rendered by this point
     });
 
-    it("collapsed is the default", async () => {
+    it("collapsed is the default", () => {
         // check if collapsed modifier is set by default
         expect(container.querySelector(".b-menu--collapsed")).toBeInTheDocument();
     });
 
-    it("hamburger click toggles the menu", async () => {
+    it("hamburger click toggles the menu", () => {
         const toggle = container.querySelector(".b-nav__toggle");
         fireEvent.click(toggle);
         expect(container.querySelector(".b-menu--collapsed")).not.toBeInTheDocument();
