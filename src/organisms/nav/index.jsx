@@ -10,7 +10,7 @@ export default function Nav() {
   const [isCollapsed, toggleCollapsed] = useState(true);
   const [data, setData] = useState([]);
   useEffect(() => {
-    getNav().then(data => setData(data));
+    getNav().then(data => setData(data)).catch(e => console.error(e));
   }, []);
 
   return (<div className={cx("b-nav", {"b-nav--collapsed": isCollapsed})}>
@@ -18,8 +18,8 @@ export default function Nav() {
       <div className="b-nav__toggle" onClick={() => toggleCollapsed(!isCollapsed)}><Icon type="hamburger" /></div>
       <Menu collapsed={isCollapsed} data={data}/>
     </div>
-    <div className="b-nav__header">
+    <header className="b-nav__header">
       <img className="b-nav__logo" alt="Wayfair Logo" src="/img/logo.svg" />
-    </div>
+    </header>
   </div>);
 }

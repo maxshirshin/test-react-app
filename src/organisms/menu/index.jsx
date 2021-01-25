@@ -28,15 +28,15 @@ function Row(props) {
         })} href={url}>
             <Icon type={urlToIconMap[url] || defaultIcon} className="b-menu__icon"/>
             <span title={title} className="b-menu__text">{title}</span>
-        </a>{isExp && children && children.length > 0 && children.map(child => <Row {...child} />)}
+        </a>{isExp && children && children.length > 0 && children.map((child, i) => <Row key={child.url + i} {...child} />)}
     </div>);
 }
 
 export default function Menu(props) {
     const { data } = props;
 
-    return (<div
+    return (<nav
         className={cx("b-menu", {
             [`b-menu--collapsed`]: !!props.collapsed
-        })}>{data.map(row => <Row {...row} />)}</div>);
+        })}>{data.map((row, i) => <Row key={row.url + i} {...row} />)}</nav>);
 }
