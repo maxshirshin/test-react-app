@@ -42,7 +42,22 @@
       text-decoration: underline;
     }
 
-    background-color: #fcc;
+    &--current {
+      color: $brand-color;
+      font-weight: bold;
+
+      &:before {
+        display: inline;
+        content: "•";
+        position: absolute;
+        margin-left: $default-icon-side;
+        visibility: hidden;
+      }
+
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
   }
 
   &__text {
@@ -59,6 +74,10 @@
 
   &__row > &__row &__icon {
     visibility: hidden;
+  }
+
+  &__row > &__row &__link--current:before {
+    visibility: visible;
   }
 
   &--collapsed {
