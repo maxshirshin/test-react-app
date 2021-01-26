@@ -8,9 +8,11 @@
 
   &__menu {
     position: fixed;
-    top: 0;
+    left: 0;
+    top: $header-height;
     bottom: 0;
     width: $menu-width_open;
+    overflow-y: auto;
 
     border-right: solid 1px $line-color;
     background-color: #fff;
@@ -46,7 +48,19 @@
   }
 
   &__toggle {
+    position: fixed;
+    top: 0;
+    width: $menu-width_open;
     padding: $menu-side-indent $menu-side-indent $header-height - $menu-side-indent - $icon-width-default $menu-side-indent;
+
+    border-right: solid 1px $line-color;
+    background-color: #fff;
+    z-index: 10;
+
     cursor: pointer;
+
+    .b-nav--collapsed & {
+      width: $menu-width_closed;
+    }
   }
 }
