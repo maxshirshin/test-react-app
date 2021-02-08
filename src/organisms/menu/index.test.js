@@ -43,5 +43,11 @@ describe("Menu", () => {
                 // make sure they all exist
                 .forEach(el => expect(el).toBeDefined());
         });
+
+        it("renders fine if no data provided", async () => {
+            const c = render(<Menu data={[]} collapsed={false}/>).container;
+
+            expect(true).toBeTruthy();
+        });
     });
 });
